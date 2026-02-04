@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://baitjet.com/sitemap.xml
+
+# Crawl delay for rate limiting
+Crawl-delay: 1
