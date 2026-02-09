@@ -42,25 +42,9 @@ body::before {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.15;
+  opacity: 0.3;
   z-index: -1;
-  
-  /* Gradient mask to blend edges */
-  mask-image: radial-gradient(
-    ellipse 80% 80% at center,
-    black 0%,
-    black 40%,
-    transparent 80%
-  );
-  -webkit-mask-image: radial-gradient(
-    ellipse 80% 80% at center,
-    black 0%,
-    black 40%,
-    transparent 80%
-  );
-  
-  /* Additional gradient overlay for smooth fade */
-  background-blend-mode: overlay;
+  filter: grayscale(30%) brightness(1.1);
 }
 
 /* Alternative: Use pseudo-element for additional gradient overlay */
