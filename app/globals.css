@@ -27,6 +27,59 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  position: relative;
+}
+
+/* Baitjet X Jay background image with gradient merge */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/baitjet-jay-nobg.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: -1;
+  
+  /* Gradient mask to blend edges */
+  mask-image: radial-gradient(
+    ellipse 80% 80% at center,
+    black 0%,
+    black 40%,
+    transparent 80%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 80% at center,
+    black 0%,
+    black 40%,
+    transparent 80%
+  );
+  
+  /* Additional gradient overlay for smooth fade */
+  background-blend-mode: overlay;
+}
+
+/* Alternative: Use pseudo-element for additional gradient overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    transparent 30%,
+    rgba(10, 10, 15, 0.8) 70%,
+    rgba(10, 10, 15, 1) 100%
+  );
+  z-index: -1;
+  pointer-events: none;
 }
 
 a {
